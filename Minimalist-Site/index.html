@@ -3,144 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/f965d16b35.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Minimalist Site</title>
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
+        <div class="mobile-menu-container">
+            <div class="mobile-header">
+                <div class="logo">
+                    <img class="logo-img" src="img/logo.png" alt="Logo">
+                </div>
+                <div class="hambar">
+                    <a class="ham-buton" href="#" onclick="toggleMenu()"><span><i class="fa-solid fa-bars" style="color: #ffffff;"></i></span></a>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <ul>
+                    <li class="mobile-menu-item"><a href="index.html">Home</a></li>
+                    <li class="mobile-menu-item"><a href="#">About</a></li>
+                    <li class="mobile-menu-item"><a href="#">Service</a></li>
+                    <li class="mobile-menu-item"><a href="#">Portfolio</a></li>
+                    <li class="mobile-menu-item"><a href="#">News</a></li>
+                    <li class="mobile-menu-item"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
         <header>
-            
             <div class="header-inner">
-                <div class="header-logo">
-                    <div class="logo">
-                        <a href="#">
-                            <img class="desktop-logo" src="img/logo.png" alt="Logo">
-                        </a>
-                    </div>
-                </div>
+                <div class="logo">
+                    <img src="img/logo.png" class="drive-logo">
+                    
 
-                <div class="header-nav">
-                    <div class="menu-container">
-                        <ul>
-                            <li class="item"><a href="https://marketifythemes.net/wp/tokyo/dark/"><span>Home</span></a></li>
-                            <li class="item"><a href="https://marketifythemes.net/wp/tokyo/dark/about/"><span>About</span></a></li>
-                            <li class="item"><a href=""><span>Service</span></a></li>
-                            <li class="item"><a href=""><span>Portfolio</span></a></li>
-                            <li class="item"><a href=""><span>News</span></a></li>
-                            <li class="item"><a href=""><span>Contacts</span></a></li>
-                        </ul>
-                    </div>
                 </div>
-
+                <div class="menu-items" id="myDropdown">
+                    <ul>
+                        <li class="item">Home</li>
+                        <li class="item">About</li>
+                        <li class="item">Service</li>
+                        <li class="item">Portfolio</li>
+                        <li class="item">News</li>
+                        <li class="item">Contact</li>
+                    </ul>
+                </div>
                 <div class="search-wrap">
-                    <form action="#" method="get">
-                        <input type="text" placeholder="Search" class="search-bar">
-                        <button type="submit" value=""><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i></button>
+                    <form class="seacrh-form">
+                        <input class="search-box" type="text" required placeholder="Search">
+                        <button class="search-button"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i></button>
                     </form>
                 </div>
                 <div class="copyright">
-                    <p>&copy; 2022 Tokyo<br>
-                        Created by <a href="#">Onurcan</a>
-                    </p>
+                    <p>&copy; 2024 Drive <br>Created by <a>Onurcan</a></p>
                 </div>
             </div>
-            
         </header>
-        <div class="mobile-nav">
-            <div class="logo">
-                <div class="in">
-                    <div class="menu-logo">
-                        <a href="#"><img src="img/mobile-logo.png" alt="logo"></a>
-                    </div>
-                    <div class="hamb">
-                        <a href="#"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>  
         
         <div class="fn-content">
-            <div class="fn-pages">
-                <div class="fn-page-ajax">
-                    <div class="full-page-template">
-                        <div class="full-page-in">
-                            <div class="fn-container">
-                                <div class="full-content">
-                                    <div class="elementor">
-                                        <section class="elementor-section">
-                                            <div class="elementor-container">
-                                                <div class="elementor-column-img">
-                                                    <div class="elementor-widget-wrap-img">
-                                                        <div class="elementor-element">
-                                                            <div class="elementor-widget-container">
-                                                                <div class="cons-wrapper">
-                                                                    <div class="animate-image">
-                                                                        <div class="image-holder">
-                                                                            <img src="img/elon.png" alt="Elon Musk">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-column-bio">
-                                                    <div class="elementor-widget-wrap-bio">
-                                                        <div class="elementor-element-header">
-                                                            <div class="elementor-widget-container">
-                                                                <h2 class="element-header">Elon Mustang</h2>
-                                                            </div>
-                                                        </div>
-                                                        <div class="elementor-element-cv">
-                                                            <div class="elementor-widget-container-cv">
-                                                                <p>I am a WordPress Developer at heart and create features that are best suited for the job at hand.</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="elementor-element-social">
-                                                            <div class="elementor-widget-container">
-                                                                <div class="cons-w-wrapper">
-                                                                    <div class="social-list">
-                                                                        <ul>
-                                                                            <li>
-                                                                                <a href=""><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href=""><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href=""><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href=""><i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i></a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a href=""><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="content-inner">
+                <div class="img-container">
+                    <div class="image-holder">
+                        <img src="img/scorpion.jpg" class="ryan" style="--color:#D3A745">
+                    </div>
+                </div>
+                <div class="bio-container">
+                    <div class="bio">
+                        <div class="name">
+                            <h2>Ryan Gosling</h2>
+                        </div>
+                        <div class="description">
+                            <p>If I drive for you, you get your money. You tell me where we start, where we're going, where we're going afterwards. I give you five minutes when we get there. Anything happens in that five minutes and I'm yours. No matter what. Anything a minute on either side of that and you're on your own. I don't sit in while you're running it down. I don't carry a gun. I drive.</p>
+                        </div>
+                        <div class="social-list">
+                            <ul>
+                                <li class="icon"><a href="#"><span><i class="fa-solid fa-phone" style="color: #ffffff;"></i></span></a></li>
+                                <li class="icon"><a href="#"><span><i class="fa-solid fa-envelope" style="color: #ffffff;"></i></span></a></li>  
+                                <li class="icon"><a href="#"><span><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></span></a></li>
+                                <li class="icon"><a href="#"><span><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></span></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
+    
 </body>
 </html>
