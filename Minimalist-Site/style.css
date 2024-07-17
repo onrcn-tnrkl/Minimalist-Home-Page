@@ -232,22 +232,22 @@ a{
     margin-left:15px;
     align-self: center;
 }
-
+.hambar a{
+    color:white;
+}
 .mobile-menu{
     display: none;
     margin:20px 0px;
     padding:0px 20px;
+    line-height: 30px;
 }
 .mobile-menu .mobile-menu-item a{
-    color:aliceblue
+    color:aliceblue;
 }
-
-.show{
-    display:block;
-}
-
-
-
+.mobile-menu .mobile-menu-item:hover{
+    color:#ffffff;
+    font-weight: bold;
+    text-shadow: 4px 4px 8px #ffffff;}
 
 
 @media (max-width: 1040px) {
