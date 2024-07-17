@@ -18,10 +18,10 @@
                     <img class="logo-img" src="img/logo.png" alt="Logo">
                 </div>
                 <div class="hambar">
-                    <a class="ham-buton" href="#" onclick="toggleMenu()"><span><i class="fa-solid fa-bars" style="color: #ffffff;"></i></span></a>
+                    <a class="ham-buton" href="#" onclick="dropDownMenu()" id="menu-icon"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></a>
                 </div>
             </div>
-            <div class="mobile-menu">
+            <div class="mobile-menu" id="myDropdown">
                 <ul>
                     <li class="mobile-menu-item"><a href="index.html">Home</a></li>
                     <li class="mobile-menu-item"><a href="#">About</a></li>
@@ -40,7 +40,7 @@
                     
 
                 </div>
-                <div class="menu-items" id="myDropdown">
+                <div class="menu-items" >
                     <ul>
                         <li class="item">Home</li>
                         <li class="item">About</li>
@@ -90,7 +90,20 @@
             </div>
         </div>
     </div>
-
+    <script>
+        function dropDownMenu(){
+            var menu = document.getElementById('myDropdown');
+            var icon = document.getElementById('menu-icon');
+            
+            if(menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'flex';
+                icon.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            } else {
+                menu.style.display = 'none';
+                icon.innerHTML = '<i class="fa-solid fa-bars" style="color: white;"></i>';
+            }
+        }
+    </script>
     
 </body>
 </html>
