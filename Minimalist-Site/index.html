@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Flexbox</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,7 +19,7 @@
                     <img class="logo-img" src="img/logo.png" alt="Logo">
                 </div>
                 <div class="hambar">
-                    <a class="ham-buton" href="#" onclick="dropDownMenu()" id="menu-icon"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></a>
+                    <a class="ham-buton" href="#" id="menu-icon"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></a>
                 </div>
             </div>
             <div class="mobile-menu" id="myDropdown">
@@ -91,18 +92,11 @@
         </div>
     </div>
     <script>
-        function dropDownMenu(){
-            var menu = document.getElementById('myDropdown');
-            var icon = document.getElementById('menu-icon');
-            
-            if(menu.style.display === 'none' || menu.style.display === '') {
-                menu.style.display = 'flex';
-                icon.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-            } else {
-                menu.style.display = 'none';
-                icon.innerHTML = '<i class="fa-solid fa-bars" style="color: white;"></i>';
-            }
-        }
+         $(document).ready(function(){
+            $("#menu-icon").click(function(){
+                $("#myDropdown").slideToggle();
+            })
+        })
     </script>
     
 </body>
