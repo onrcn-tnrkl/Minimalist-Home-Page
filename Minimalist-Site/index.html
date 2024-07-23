@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Flexbox</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -92,11 +91,17 @@
         </div>
     </div>
     <script>
-         $(document).ready(function(){
-            $("#menu-icon").click(function(){
-                $("#myDropdown").slideToggle();
-            })
-        })
+         document.getElementById('menu-icon').addEventListener('click',function(event){
+            event.preventDefault();
+            let menu= document.getElementById("myDropdown");
+            if(menu.style.maxHeight){
+                menu.style.maxHeight=null;
+            }
+            else{
+                
+                menu.style.maxHeight=menu.scrollHeight+"px";
+            }
+         });
     </script>
     
 </body>
