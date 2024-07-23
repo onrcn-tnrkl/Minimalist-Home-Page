@@ -220,9 +220,9 @@ a{
     height: 60px;
     width: 100%;
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 0 20px; 
+    align-items: center; /* Logo ve menü ikonunu ortalar */
+    justify-content: space-between; /* Logo ve menü ikonunu iki kenara yayar */
+    padding: 0 20px; /* Sağdan ve soldan boşluk ekler */
     border-bottom:1px solid #4e4e4e;  
 }
 .logo-img{
@@ -235,6 +235,9 @@ a{
 .hambar a{
     color:white;
 }
+.ham-buton.iconChange{
+    content: '<i class="fa-solid fa-xmark fa-lg" style="color: #ffffff;"></i>';
+}
 .mobile-menu{
     margin:0;
     padding:0px 20px;
@@ -243,6 +246,11 @@ a{
     transition: max-height 0.5s ease-out;
     overflow: hidden;
 }
+
+.mobile-menu.open{
+    max-height: 500px;
+}
+
 
 .mobile-menu ul{
     margin:20px 0px;
@@ -272,7 +280,7 @@ a{
         width: 100%;
         margin: 0;
         height: 100%;
-        margin-top: 150px; 
+        margin-top: 150px; /* Header yüksekliği kadar boşluk */
     }
 
     .content-inner {
@@ -311,7 +319,7 @@ a{
         display: flex;
     }
     .fn-content {
-        width: calc(100% - 400px); 
+        width: calc(100% - 400px); /* Header genişliği kadar boşluk */
         margin:0;
         height: 100vh;
     }
