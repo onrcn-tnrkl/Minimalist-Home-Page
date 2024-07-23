@@ -220,9 +220,9 @@ a{
     height: 60px;
     width: 100%;
     display: flex;
-    align-items: center; /* Logo ve menü ikonunu ortalar */
-    justify-content: space-between; /* Logo ve menü ikonunu iki kenara yayar */
-    padding: 0 20px; /* Sağdan ve soldan boşluk ekler */
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 20px; 
     border-bottom:1px solid #4e4e4e;  
 }
 .logo-img{
@@ -236,10 +236,16 @@ a{
     color:white;
 }
 .mobile-menu{
-    display: none;
-    margin:20px 0px;
+    margin:0;
     padding:0px 20px;
     line-height: 30px;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+}
+
+.mobile-menu ul{
+    margin:20px 0px;
 }
 
 .mobile-menu .mobile-menu-item a{
@@ -266,7 +272,7 @@ a{
         width: 100%;
         margin: 0;
         height: 100%;
-        margin-top: 150px; /* Header yüksekliği kadar boşluk */
+        margin-top: 150px; 
     }
 
     .content-inner {
@@ -305,7 +311,7 @@ a{
         display: flex;
     }
     .fn-content {
-        width: calc(100% - 400px); /* Header genişliği kadar boşluk */
+        width: calc(100% - 400px); 
         margin:0;
         height: 100vh;
     }
